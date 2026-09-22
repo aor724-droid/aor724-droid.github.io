@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#263C96">
+<title>ระบบสรุปข้อมูลการสมัครสอบ O-NET ปีการศึกษา 2569</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand-row">
+      <div class="badge-logo">O-NET<br>69</div>
+      <div>
+        <div class="eyebrow">Dashboard • ข้อมูลเพื่อการประชุมผู้บริหารสถานศึกษา</div>
+      </div>
+    </div>
+    <h1>ระบบสรุปข้อมูลการสมัครสอบ O-NET ปีการศึกษา 2569</h1>
+    <div class="hero-sub">ระดับชั้นมัธยมศึกษาปีที่ 3 และมัธยมศึกษาปีที่ 6<br>สังกัด สำนักงานเขตพื้นที่การศึกษามัธยมศึกษานครราชสีมา</div>
+    <div class="source-strip">
+      <div class="source-title">แหล่งที่มาข้อมูล</div>
+      <strong>ฐานข้อมูลจำนวนนักเรียน:</strong> รายงานจำนวนนักเรียน ปีการศึกษา 2569 รอบที่ 1 ของ สพม.นครราชสีมา
+      <br><strong>ข้อมูลผู้สมัครสอบ O-NET:</strong> ระบบ O-NET สถาบันทดสอบทางการศึกษาแห่งชาติ (สทศ.) ปีการศึกษา 2569 โดยศูนย์สอบ สพม.นครราชสีมา
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#overview">ภาพรวม</a>
+    <a href="#groups">กลุ่มโรงเรียน</a>
+    <a href="#ranges">ช่วงร้อยละ</a>
+    <a href="#schools">รายโรงเรียน</a>
+    <a href="#sources">แหล่งข้อมูล</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="overview" class="section">
+    <div class="section-head">
+      <h2 class="section-title">ภาพรวม สพม.นครราชสีมา</h2>
+      <div class="section-note">50 โรงเรียน</div>
+    </div>
+    <div class="kpis">
+      <div class="card kpi">
+        <div class="kpi-label">โรงเรียนในสังกัด</div>
+        <div class="kpi-number" id="schoolCount">50</div>
+        <div class="kpi-unit">โรงเรียน</div>
+      </div>
+      <div class="card kpi level-kpi">
+        <div>
+          <div class="level-title">มัธยมศึกษาปีที่ 3</div>
+          <div class="stats-line">
+            <div class="mini-stat"><strong id="m3Total">-</strong><span>นักเรียนทั้งหมด</span></div>
+            <div class="mini-stat"><strong id="m3App">-</strong><span>สมัครสอบ</span></div>
+          </div>
+        </div>
+        <div class="ring" id="m3Ring"><b id="m3Pct">-</b></div>
+      </div>
+      <div class="card kpi level-kpi">
+        <div>
+          <div class="level-title">มัธยมศึกษาปีที่ 6</div>
+          <div class="stats-line">
+            <div class="mini-stat"><strong id="m6Total">-</strong><span>นักเรียนทั้งหมด</span></div>
+            <div class="mini-stat"><strong id="m6App">-</strong><span>สมัครสอบ</span></div>
+          </div>
+        </div>
+        <div class="ring" id="m6Ring"><b id="m6Pct">-</b></div>
+      </div>
+    </div>
+
+    <div class="card quick-compare">
+      <div class="compare-row"><span>ม.3</span><div class="track"><div class="fill" id="m3Bar"></div></div><div class="compare-val" id="m3BarVal"></div></div>
+      <div class="compare-row"><span>ม.6</span><div class="track"><div class="fill" id="m6Bar"></div></div><div class="compare-val" id="m6BarVal"></div></div>
+    </div>
+  </section>
+
+  <section id="groups" class="section">
+    <div class="section-head">
+      <h2 class="section-title">ภาพรวม 5 กลุ่มโรงเรียน</h2>
+      <div class="section-note">กดที่กลุ่มเพื่อดูโรงเรียนทั้ง 10 แห่ง</div>
+    </div>
+    <div class="group-grid" id="groupGrid"></div>
+  </section>
+
+  <section id="ranges" class="section">
+    <div class="section-head">
+      <h2 class="section-title">จำนวนโรงเรียนตามช่วงร้อยละการสมัครสอบ</h2>
+      <div class="section-note">กดช่วงร้อยละเพื่อดูรายชื่อโรงเรียน</div>
+    </div>
+    <div class="range-panels">
+      <div class="card range-panel">
+        <div class="range-title">มัธยมศึกษาปีที่ 3</div>
+        <div class="range-grid" id="m3Ranges"></div>
+      </div>
+      <div class="card range-panel">
+        <div class="range-title">มัธยมศึกษาปีที่ 6</div>
+        <div class="range-grid" id="m6Ranges"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schools" class="section">
+    <div class="section-head">
+      <h2 class="section-title">ข้อมูลรายโรงเรียน</h2>
+      <div class="section-note">เรียงตามตัวอักษร และเลือกดูตามกลุ่มได้</div>
+    </div>
+    <div class="card school-launch">
+      <div>
+        <h3>เรียงตามลำดับอักษร</h3>
+        <p>กดเลือกชื่อโรงเรียนเพื่อดูจำนวนนักเรียน ผู้สมัครสอบ และร้อยละของ ม.3 และ ม.6</p>
+      </div>
+      <button class="primary" onclick="openSchoolPicker()">เลือกโรงเรียน</button>
+    </div>
+  </section>
+
+  <section id="sources" class="section">
+    <div class="section-head">
+      <h2 class="section-title">แหล่งข้อมูล</h2>
+    </div>
+    <div class="sources">
+      <div class="card source-card">
+        <h3>จำนวนนักเรียน</h3>
+        <p>ระบบข้อมูลสารสนเทศจำนวนนักเรียน สำนักงานเขตพื้นที่การศึกษามัธยมศึกษานครราชสีมา ปีการศึกษา 2569 รอบที่ 1 ซึ่งใช้เป็นฐานข้อมูลหลักในการคำนวณร้อยละ</p>
+      </div>
+      <div class="card source-card">
+        <h3>จำนวนผู้สมัครสอบ O-NET</h3>
+        <p>ข้อมูลจากระบบ O-NET สถาบันทดสอบทางการศึกษาแห่งชาติ (สทศ.) ปีการศึกษา 2569 โดยศูนย์สอบสำนักงานเขตพื้นที่การศึกษามัธยมศึกษานครราชสีมา</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-kicker">จัดทำและวิเคราะห์ข้อมูลโดย</div>
+    <div class="footer-name">ศศิธร เจริญใจ</div>
+    <div class="footer-line">ศึกษานิเทศก์<br>กลุ่มงานวัดและประเมินผลการศึกษา<br>สำนักงานเขตพื้นที่การศึกษามัธยมศึกษานครราชสีมา</div>
+  </div>
+</footer>
+
+<div class="modal" id="groupModal" onclick="backdropClose(event,'groupModal')">
+  <div class="modal-box">
+    <div class="modal-head"><div class="modal-title" id="groupModalTitle"></div><button class="close" onclick="closeModal('groupModal')">×</button></div>
+    <div class="modal-body" id="groupModalBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="rangeModal" onclick="backdropClose(event,'rangeModal')">
+  <div class="modal-box">
+    <div class="modal-head"><div class="modal-title" id="rangeModalTitle"></div><button class="close" onclick="closeModal('rangeModal')">×</button></div>
+    <div class="modal-body" id="rangeModalBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="schoolPicker" onclick="backdropClose(event,'schoolPicker')">
+  <div class="modal-box">
+    <div class="modal-head"><div class="modal-title">เลือกโรงเรียน</div><button class="close" onclick="closeModal('schoolPicker')">×</button></div>
+    <div class="modal-body">
+      <div class="filters" id="groupFilters"></div>
+      <div id="schoolPickerList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="schoolModal" onclick="backdropClose(event,'schoolModal')">
+  <div class="modal-box">
+    <div class="modal-head"><div class="modal-title" id="schoolModalTitle"></div><button class="close" onclick="closeModal('schoolModal')">×</button></div>
+    <div class="modal-body" id="schoolModalBody"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
