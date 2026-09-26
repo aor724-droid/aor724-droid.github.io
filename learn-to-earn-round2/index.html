@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6f4aa6">
+<title>ระบบค้นหาและดาวน์โหลดเกียรติบัตร Learn to Earn - รอบเพิ่มเติม</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#6f4aa6;--purple2:#8d68be;--ink:#282037;--muted:#766e83;--gold:#d39a45;--cream:#fffaf2;--line:#e9e1f2;--ok:#237b59;--shadow:0 20px 60px rgba(73,44,105,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans Thai",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 5% -10%,#eee3ff 0,transparent 32%),radial-gradient(circle at 95% 4%,#ffe9c9 0,transparent 28%),linear-gradient(180deg,#fffdf9,#fbf8ff 60%,#fffdf9);min-height:100vh}
+body:before,body:after{content:"";position:fixed;z-index:-1;border-radius:999px;filter:blur(4px);opacity:.4}body:before{width:260px;height:260px;background:#f8d5e6;left:-130px;bottom:10%}body:after{width:220px;height:220px;background:#d9eee1;right:-100px;bottom:-30px}
+.wrap{width:min(980px,calc(100% - 28px));margin:auto;padding:24px 0 52px}.topline{text-align:center;font-size:13px;color:#726a7d;letter-spacing:.2px;margin:8px 0 16px}.hero{background:rgba(255,255,255,.84);border:1px solid rgba(111,74,166,.12);border-radius:30px;box-shadow:var(--shadow);overflow:hidden;position:relative}.hero:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#6f4aa6,#a87ac3,#df9b53,#88ad8d)}.heroInner{padding:40px 42px 28px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#f3edfa;color:#654392;font-weight:700;font-size:13px}.eyebrow .dot{width:8px;height:8px;background:#d49a46;border-radius:50%;box-shadow:0 0 0 4px rgba(212,154,70,.15)}h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:16px 0 6px;letter-spacing:-.7px}.accent{color:var(--purple)}.sub{margin:0 auto;color:var(--muted);font-size:clamp(15px,2.3vw,18px);max-width:720px;line-height:1.75}.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:22px 0 0}.chip{padding:7px 12px;border:1px solid var(--line);background:#fff;border-radius:999px;color:#62586d;font-size:13px;font-weight:600}.searchBox{margin:28px auto 4px;max-width:760px;padding:10px;background:#fff;border:1px solid #e6ddee;border-radius:20px;display:flex;gap:8px;box-shadow:0 9px 30px rgba(86,56,117,.09)}.searchBox:focus-within{border-color:#aa8dca;box-shadow:0 0 0 4px rgba(111,74,166,.08),0 9px 30px rgba(86,56,117,.09)}input{min-width:0;flex:1;border:0;outline:none;padding:12px 14px;font:600 17px "Noto Sans Thai",sans-serif;color:var(--ink);background:transparent}input::placeholder{font-weight:400;color:#a39aa9}.btnSearch{border:0;border-radius:14px;padding:12px 21px;background:linear-gradient(135deg,#6f4aa6,#895eb6);color:white;font:700 16px "Noto Sans Thai";cursor:pointer;box-shadow:0 8px 20px rgba(111,74,166,.23)}.hint{font-size:13px;color:#918899;margin-top:10px}
+.panel{margin-top:18px;background:rgba(255,255,255,.83);border:1px solid rgba(111,74,166,.11);border-radius:25px;padding:23px;box-shadow:0 14px 40px rgba(73,44,105,.08)}.status{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;min-height:28px}.status strong{font-size:17px}.status span{font-size:13px;color:#8b8291}.empty{text-align:center;padding:30px 12px;color:#817789}.emptyIcon{width:54px;height:54px;border-radius:18px;margin:0 auto 12px;display:grid;place-items:center;background:#f3edf9;font-size:26px}.results{display:grid;gap:12px}.card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;border:1px solid #ebe4f1;background:#fff;border-radius:19px;padding:15px;transition:.18s ease}.card:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(80,50,110,.08);border-color:#d7c8e6}.number{min-width:86px;text-align:center;background:linear-gradient(145deg,#f2ebfa,#fff6e9);border:1px solid #e3d7ee;color:#654392;border-radius:14px;padding:9px 10px;font-weight:800;font-size:14px}.name{font-size:17px;font-weight:700;line-height:1.4}.mini{margin-top:2px;color:#918799;font-size:12px}.actions{display:flex;gap:7px}.action{white-space:nowrap;text-decoration:none;border-radius:12px;padding:9px 12px;font-size:13px;font-weight:700;border:1px solid #ded3e9;color:#654392;background:#fff}.action.primary{background:#6f4aa6;color:#fff;border-color:#6f4aa6}.action:hover{filter:brightness(.98)}
+.notice{margin-top:15px;border-radius:18px;padding:15px 17px;background:#fffaf0;border:1px solid #f0dfbf;color:#6e5a39;font-size:13px;line-height:1.65}.footer{text-align:center;color:#91899a;font-size:12px;line-height:1.7;margin-top:25px}.footer b{color:#6f4aa6}.badge{display:inline-flex;align-items:center;gap:6px;color:var(--ok);font-weight:700}.badge:before{content:"✓";display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#e3f4ed;color:var(--ok);font-size:11px}
+@media(max-width:720px){.wrap{width:min(100% - 18px,980px);padding-top:12px}.hero{border-radius:23px}.heroInner{padding:29px 16px 21px}.searchBox{flex-direction:column;padding:8px}.btnSearch{width:100%}.panel{padding:14px;border-radius:20px}.card{grid-template-columns:1fr;gap:10px}.number{justify-self:start;min-width:0}.actions{display:grid;grid-template-columns:1fr 1fr;width:100%}.action{text-align:center;padding:10px 7px}.status{align-items:flex-start;flex-direction:column;gap:2px}}
+@media print{body{background:#fff}.searchBox,.panel,.chips,.hint,.notice,.footer{display:none}.hero{box-shadow:none;border:0}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="topline">สำนักงานเขตพื้นที่การศึกษามัธยมศึกษานครราชสีมา</div>
+  <section class="hero">
+    <div class="heroInner">
+      <div class="eyebrow"><span class="dot"></span> E-Certificate · รอบเพิ่มเติม</div>
+      <h1>ระบบค้นหาและดาวน์โหลด<br><span class="accent">เกียรติบัตรออนไลน์</span></h1>
+      <p class="sub">ผู้นำเสนอผลงาน “Learn to Earn” ภายในงาน “สพม.โคราช Next-Gen Symposium 2026”</p>
+      <div class="chips"><span class="chip">55 เกียรติบัตร</span><span class="chip">เลขที่ 22284-22338</span><span class="chip">3 กันยายน 2569</span><span class="chip">PDF พร้อมพิมพ์</span></div>
+      <div class="searchBox">
+        <input id="q" autocomplete="off" inputmode="search" aria-label="ค้นหาชื่อหรือนามสกุลหรือเลขที่เกียรติบัตร" placeholder="พิมพ์ชื่อ นามสกุล หรือเลขที่เกียรติบัตร">
+        <button class="btnSearch" id="go">ค้นหาเกียรติบัตร</button>
+      </div>
+      <div class="hint">พิมพ์เพียงบางส่วนก็ได้ เช่น “อัจฉรา”, “กว้างนอก” หรือ “22284”</div>
+    </div>
+  </section>
+
+  <section class="panel" aria-live="polite">
+    <div class="status"><strong id="statusTitle">ค้นหาเกียรติบัตรของท่าน</strong><span id="statusMeta">ข้อมูลรอบเพิ่มเติม 55 รายการ</span></div>
+    <div id="results" class="results"><div class="empty"><div class="emptyIcon">⌕</div>กรอกชื่อ-นามสกุล หรือเลขที่เกียรติบัตรด้านบนเพื่อค้นหา</div></div>
+    <div class="notice">หากชื่อเดียวกันมีมากกว่า 1 เลขที่ ระบบจะแสดงทุกรายการ กรุณาตรวจสอบเลขที่เกียรติบัตรก่อนดาวน์โหลด</div>
+  </section>
+
+  <div class="footer"><span class="badge">ค้นหาและดาวน์โหลดได้จากโทรศัพท์ คอมพิวเตอร์ และแท็บเล็ต</span><br>ระบบ E-Certificate · Learn to Earn · สพม.นครราชสีมา</div>
+</main>
+<script>
+const DATA = [
+[22284,"นางสาวอัจฉรา บุตโคต"],[22285,"นางสาวกฤตยา นราธร"],[22286,"นายทวียศ พืชสอน"],[22287,"เด็กหญิงธัญพร ร่มพุดซา"],[22288,"เด็กหญิงกิตติยา พรมวงศ์"],[22289,"นางสาวเกษราวัลณ์ ศรีจันทร์"],[22290,"นางสุดารัตน์ กว้างนอก"],[22291,"นางสาวเกษราวัลณ์ ศรีจันทร์"],[22292,"นางกรณิศา สำเร็จ"],[22293,"ว่าที่ ร.ต.นิกร บุตรราช"],[22294,"นางพรรษสรณ์ ภูริวัฒน์วงษ์"],[22295,"นายอัมรินทร์ เกยจอหอ"],[22296,"นางฐิติมา สินกระโทก"],[22297,"นางอาภรณ์ เสิงกำปัง"],[22298,"นางสาวมนพร โพธิ์สุวรรณ"],[22299,"นายณัฐพล เกิดจันทึก"],[22300,"นายศิวกร สถิเรืองกิตต์"],[22301,"นางสาวพิมพ์พิศุทธิ์ จุฬคุปต์"],[22302,"นางสาวรัญชิดา ด่านกระโทก"],[22303,"นายธนภัทร ฟุ้งมงคลเสถียร"],[22304,"นางสาวกัญญาภัค ยังสูงเนิน"],[22305,"นางสาวณัฐวิภา จวนรุ่ง"],[22306,"นางสาวพรนรินทร์ พูลสวัสดิ์"],[22307,"นางสาวบุณยานุช สังข์เพ็ชร"],[22308,"นางสาวกุลนาถ อยู่ศรี"],[22309,"นางสาวสุรภา ป.ป.สูงเนิน"],[22310,"นางสาวพรรณนิชา เอิบโคกสูง"],[22311,"นางสาวชนิกานต์ รัตนทิพย์"],[22312,"นายกมลพันธ์ เทพังเทียม"],[22313,"นายธนกฤต จิตรีศิลป์"],[22314,"นายวันระพี เต็มรัมย์"],[22315,"เด็กหญิงปาริชาติ เดชเสน"],[22316,"เด็กหญิงเพชรรัตน์ ผิวแดง"],[22317,"นางกรณิศา สำเร็จ"],[22318,"นางสาวสุรัสวดี ปรีเปรม"],[22319,"นายสุรพล ภูมิโคกรักษ์"],[22320,"นายสมพร สาโพนทัน"],[22321,"นางสาวประกายแก้ว นาคตระกูล"],[22322,"นางสาวฐิติพร บัวรัตน์"],[22323,"นางสาวณกัญญา กาละพัตร"],[22324,"นางสาวสลิลทิพย์ เมนไธสง"],[22325,"นางกรณิศา สำเร็จ"],[22326,"นางสาวฐิตินันท์ สิทธิหงษ์"],[22327,"นางสาวอภิฤดี เประดา"],[22328,"นางสาวกัลยา ดวงประโคน"],[22329,"นางสาวปิยะนันท์ ชัยไธสง"],[22330,"นายณัฐสิทธิ์ แก้วคูนอก"],[22331,"นางสุมิตรา การสร้าง"],[22332,"นางละออง วงษาเวียง"],[22333,"นางสาวเพชรนรินทร์ ประทาน"],[22334,"นางสาวณัฏฐา พละสุ"],[22335,"นางสาวอภิฤดี เประดา"],[22336,"นางสาวข้าวหอม เหล็กสี"],[22337,"นางสาวธัญญาภรณ์ นาดี"],[22338,"นางบุษบา ชื่นฤทธิ์"]
+];
+const titleRx=/^(ว่าที่\s*ร\.ต\.|ดร\.|เด็กหญิง|เด็กชาย|นางสาว|นาง|นาย)\s*/i;
+function norm(s){return String(s||"").normalize("NFC").toLowerCase().replace(/[.\-_/\\(),]/g,"").replace(/\s+/g,"").trim()}
+function stripped(s){return norm(String(s||"").replace(titleRx,""))}
+function dist(a,b){if(!a)return b.length;if(!b)return a.length;const row=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let prev=row[0];row[0]=i;for(let j=1;j<=b.length;j++){const tmp=row[j];row[j]=Math.min(row[j]+1,row[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=tmp}}return row[b.length]}
+function escapeHtml(s){return String(s).replace(/[&<>'"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[m]))}
+function findMatches(raw){const q=norm(raw),qs=stripped(raw);if(!q)return [];const numeric=/^\d+$/.test(q);let exact=DATA.filter(([n,name])=>numeric?String(n).includes(q):(norm(name).includes(q)||stripped(name).includes(q)||stripped(name).includes(qs)));
+if(exact.length||numeric||q.length<4)return exact;
+return DATA.filter(([n,name])=>{const a=stripped(name),threshold=qs.length<=5?1:2;if(dist(a,qs)<=threshold)return true;return a.split(/\s+/).some(x=>dist(x,qs)<=threshold)}).slice(0,8)}
+function render(){const raw=document.getElementById('q').value.trim(),out=document.getElementById('results'),title=document.getElementById('statusTitle'),meta=document.getElementById('statusMeta');if(!raw){title.textContent='ค้นหาเกียรติบัตรของท่าน';meta.textContent='ข้อมูลรอบเพิ่มเติม 55 รายการ';out.innerHTML='<div class="empty"><div class="emptyIcon">⌕</div>กรอกชื่อ-นามสกุล หรือเลขที่เกียรติบัตรด้านบนเพื่อค้นหา</div>';return}const rows=findMatches(raw);title.textContent=rows.length?`พบ ${rows.length} รายการ`:'ไม่พบข้อมูล';meta.textContent=`คำค้น: “${raw}”`;if(!rows.length){out.innerHTML='<div class="empty"><div class="emptyIcon">?</div>ไม่พบชื่อหรือเลขที่นี้ ลองพิมพ์เพียงบางส่วนของชื่อหรือนามสกุลอีกครั้ง</div>';return}out.innerHTML=rows.map(([n,name])=>`<article class="card"><div class="number">เลขที่ ${n}</div><div><div class="name">${escapeHtml(name)}</div><div class="mini">เกียรติบัตร Learn to Earn · 2569</div></div><div class="actions"><a class="action" href="#" data-open="${n}">เปิด / พิมพ์</a><a class="action primary" href="#" data-download="${n}">ดาวน์โหลด PDF</a></div></article>`).join('')}
+async function getPdfBlob(n){
+ const res=await fetch(`certificates/${n}.b64`,{cache:'force-cache'});
+ if(!res.ok) throw new Error('ไม่พบไฟล์เกียรติบัตร');
+ const b64=(await res.text()).trim();
+ const bin=atob(b64); const bytes=new Uint8Array(bin.length);
+ for(let i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i);
+ return new Blob([bytes],{type:'application/pdf'});
+}
+document.addEventListener('click',async e=>{
+ const open=e.target.closest('[data-open]'), down=e.target.closest('[data-download]');
+ if(!open&&!down)return; e.preventDefault(); const el=open||down; const n=el.dataset.open||el.dataset.download;
+ const old=el.textContent; el.textContent='กำลังเตรียมไฟล์…'; el.style.pointerEvents='none';
+ let w=null; if(open) w=window.open('about:blank','_blank');
+ try{ const blob=await getPdfBlob(n); const url=URL.createObjectURL(blob);
+   if(open){ if(w) w.location.href=url; else window.location.href=url; setTimeout(()=>URL.revokeObjectURL(url),120000); }
+   else { const a=document.createElement('a'); a.href=url; a.download=`Learn-to-Earn-${n}.pdf`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),30000); }
+ }catch(err){ if(w) w.close(); alert('ขออภัย ไม่สามารถเปิดไฟล์ได้ กรุณาลองอีกครั้ง'); }
+ finally{el.textContent=old;el.style.pointerEvents='';}
+});
+document.getElementById('go').addEventListener('click',render);document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')render()});document.getElementById('q').addEventListener('input',()=>{if(document.getElementById('q').value.trim().length>=2)render()});
+</script>
+</body>
+</html>
